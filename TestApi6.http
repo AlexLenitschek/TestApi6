@@ -1,0 +1,33 @@
+@TestApi6_HostAddress = https://localhost:7074
+
+GET {{TestApi6_HostAddress}}/weatherforecast/
+Accept: application/json
+
+### Created via the View/Other Windows/Endpoint Explorer menu in Visual Studio
+
+###
+GET {{TestApi6_HostAddress}}/api/employees
+
+###
+
+@id=string
+GET {{TestApi6_HostAddress}}/api/Employees/{{id}}
+
+###
+
+POST {{TestApi6_HostAddress}}/api/employees
+Content-Type: application/json
+
+{
+  //AddEmployeeDto
+}
+
+###
+
+PUT {{TestApi6_HostAddress}}/api/Employees/{{id}}
+
+###
+
+DELETE {{TestApi6_HostAddress}}/api/Employees/{{id}}
+
+###
