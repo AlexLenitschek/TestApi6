@@ -14,6 +14,7 @@ builder.Services.AddDbContext<TestApi6DbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
+Console.WriteLine("Database: " + builder.Configuration.GetConnectionString("DefaultConnection"));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

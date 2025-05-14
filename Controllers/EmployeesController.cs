@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TestApi6.Data;
 using TestApi6.Models;
 using TestApi6.Models.Entities;
@@ -103,6 +104,13 @@ namespace TestApi6.Controllers
             dbContext.Remove(employee);
             dbContext.SaveChanges();
             return Ok("Employee deleted successfully");
+        }
+
+        [HttpGet("raw")]
+        public IActionResult GetRaw()
+        {
+            var data = dbContext.Employees.ToList();
+            return Ok(data);
         }
 
     }

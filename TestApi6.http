@@ -3,8 +3,6 @@
 GET {{TestApi6_HostAddress}}/weatherforecast/
 Accept: application/json
 
-### Created via the View/Other Windows/Endpoint Explorer menu in Visual Studio
-
 ###
 GET {{TestApi6_HostAddress}}/api/employees
 
